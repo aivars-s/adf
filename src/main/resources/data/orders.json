@@ -1,0 +1,74 @@
+[
+  {
+    "customerId": 1,
+    "productId": 1,
+    "amount": 1,
+    "deliveryType": "RECEIVE_AT_OFFICE",
+    "paymentType": "TRANSFER_PREPAID",
+    "unitPrice": 800.99
+  },
+  {
+    "customerId": 1,
+    "productId": 2,
+    "amount": 2,
+    "deliveryType": "DELIVER_TO_ADDRESS",
+    "paymentType": "CARD_PREPAID",
+    "unitPrice": 959.99
+  },
+  {
+    "customerId": 1,
+    "productId": 3,
+    "amount": 2,
+    "deliveryType": "DELIVER_TO_POSTAL_OFFICE",
+    "paymentType": "TRANSFER_ON_RECEIPT",
+    "unitPrice": 299.95
+  },
+  {
+    "customerId": 2,
+    "productId": 1,
+    "amount": 2,
+    "deliveryType": "RECEIVE_AT_OFFICE",
+    "paymentType": "CARD_ON_RECEIPT",
+    "unitPrice": 800.99
+  },
+  {
+    "customerId": 2,
+    "productId": 3,
+    "amount": 3,
+    "deliveryType": "DELIVER_TO_ADDRESS",
+    "paymentType": "CASH_ON_RECEIPT",
+    "unitPrice": 299.95
+  },
+  {
+    "customerId": 3,
+    "productId": 1,
+    "amount": 1,
+    "deliveryType": "DELIVER_TO_POSTAL_OFFICE",
+    "paymentType": "CARD_ON_RECEIPT",
+    "unitPrice": 800.99
+  },
+  {
+    "customerId": 3,
+    "productId": 2,
+    "amount": 1,
+    "deliveryType": "RECEIVE_AT_OFFICE",
+    "paymentType": "TRANSFER_ON_RECEIPT",
+    "unitPrice": 959.99
+  },
+  {
+    "customerId": 3,
+    "productId": 3,
+    "amount": 2,
+    "deliveryType": "DELIVER_TO_ADDRESS",
+    "paymentType": "CARD_PREPAID",
+    "unitPrice": 299.95
+  },
+  {
+    "customerId": 3,
+    "productId": 4,
+    "amount": 4,
+    "deliveryType": "DELIVER_TO_POSTAL_OFFICE",
+    "paymentType": "TRANSFER_PREPAID",
+    "unitPrice": 100.95
+  }
+]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout(~{::body}, 'Orders', true)}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Orders</h1>
+<a class="btn btn-primary" href="/orders/new">Create new order</a>
+<table class="table table-hover table-striped">
+    <thead>
+    <tr>
+        <th>Created at</th>
+        <th>Amount</th>
+        <th>Price per unit</th>
+        <th>Total price</th>
+        <th>Delivery type</th>
+        <th>Payment type</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="order : ${orders}">
+        <td th:text="${order.createdAt}"></td>
+        <td th:text="${order.amount}"></td>
+        <td th:text="${order.unitPrice}"></td>
+        <td th:text="${order.unitPrice * order.amount}"></td>
+        <td th:text="${order.deliveryType.displayValue}"></td>
+        <td th:text="${order.paymentType.displayValue}"></td>
+        <td><a th:href="@{/orders/__${order.id}__}">Details</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

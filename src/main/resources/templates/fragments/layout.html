@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content, title, displayNavbar)">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Title</title>
+    <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<th:block th:replace="${displayNavbar == true}? ~{fragments/navbar :: navbar} : ~{}"></th:block>
+<div class="container" th:insert="${content}">
+</div>
+</body>
+</html>

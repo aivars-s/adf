@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav th:fragment="navbar" class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav">
+        <li sec:authorize="hasAnyAuthority('ADMIN', 'CUSTOMER_SERVICE')" class="nav-item">
+            <a class="nav-link" href="/orders">Orders</a>
+        </li>
+        <li sec:authorize="hasAnyAuthority('ADMIN', 'DATA_ENTRY')" class="nav-item">
+            <a class="nav-link" href="/products">Products</a>
+        </li>
+        <form class="form-inline" action="/logout" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            <li class="nav-item">
+                <button type="submit" class="btn btn-link" href="/logout">Logout</button>
+            </li>
+        </form>
+    </ul>
+</nav>
+</body>
+</html>

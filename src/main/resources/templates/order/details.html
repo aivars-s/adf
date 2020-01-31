@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout(~{::body}, 'Order details', true)}">>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Order details</h1>
+<a class="btn btn-secondary" href="/orders">Back</a>
+<table class="table table-hover table-striped">
+    <tbody>
+    <tr>
+        <th>First name</th>
+        <td th:text="${order.customer.firstName}"></td>
+    </tr>
+    <tr>
+        <th>Last name</th>
+        <td th:text="${order.customer.lastName}"></td>
+    </tr>
+    <tr>
+        <th>E-mail</th>
+        <td th:text="${order.customer.email}"></td>
+    </tr>
+    <tr>
+        <th>Phone</th>
+        <td th:text="${order.customer.phone}"></td>
+    </tr>
+    <tr>
+        <th>Created at</th>
+        <td th:text="${order.createdAt}"></td>
+    </tr>
+    <tr>
+        <th>Amount</th>
+        <td th:text="${order.amount}"></td>
+    </tr>
+    <tr>
+        <th>Price per unit</th>
+        <td th:text="${order.unitPrice}"></td>
+    </tr>
+    <tr>
+        <th>Total price</th>
+        <td th:text="${order.unitPrice * order.amount}"></td>
+    </tr>
+    <tr>
+        <th>Delivery type</th>
+        <td th:text="${order.deliveryType.displayValue}"></td>
+    </tr>
+    <tr>
+        <th>Delivery type</th>
+        <td th:text="${order.paymentType.displayValue}"></td>
+    </tr>
+    <tr>
+        <th>Product category</th>
+        <td th:text="${order.product.category}"></td>
+    </tr>
+    <tr>
+        <th>Product manufacturer</th>
+        <td th:text="${order.product.manufacturer}"></td>
+    </tr>
+    <tr>
+        <th>Product name</th>
+        <td th:text="${order.product.name}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

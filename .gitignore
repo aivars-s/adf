@@ -1,0 +1,9 @@
+# IDEA
+.idea
+*.iml
+
+#Build
+target
+
+docker-compose.yaml
+Jenkinsfile

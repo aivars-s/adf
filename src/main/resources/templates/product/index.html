@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout(~{::body}, 'Products', true)}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Products</h1>
+<a class="btn btn-primary" href="/products/new">Create new product</a>
+<table class="table table-hover table-striped">
+    <thead>
+    <tr>
+        <th>Category</th>
+        <th>Manufacturer</th>
+        <th>Name</th>
+        <th>Remaining amount</th>
+        <th>Price per unit</th>
+        <th>Discontinued</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.category}"></td>
+        <td th:text="${product.manufacturer}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.remainingAmount}"></td>
+        <td th:text="${product.unitPrice}"></td>
+        <td th:text="${product.discontinued}? 'Yes' : 'No'"></td>
+        <td><a th:href="@{/products/__${product.id}__}">Details</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

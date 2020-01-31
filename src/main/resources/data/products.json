@@ -1,0 +1,34 @@
+[
+  {
+    "category": "Computers",
+    "manufacturer": "HP",
+    "name": "Pavilion",
+    "unitPrice": 800.99,
+    "remainingAmount": 20,
+    "discontinued": false
+  },
+  {
+    "category": "Computers",
+    "manufacturer": "Dell",
+    "name": "Latitude",
+    "unitPrice": 959.99,
+    "remainingAmount": 25,
+    "discontinued": false
+  },
+  {
+    "category": "Monitors",
+    "manufacturer": "HP",
+    "name": "Z Display",
+    "unitPrice": 299.95,
+    "remainingAmount": 46,
+    "discontinued": false
+  },
+  {
+    "category": "Discontinued",
+    "manufacturer": "Unknown",
+    "name": "Garbage",
+    "unitPrice": 100.95,
+    "remainingAmount": 4,
+    "discontinued": true
+  }
+]
